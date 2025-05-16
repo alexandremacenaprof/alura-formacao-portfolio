@@ -1,0 +1,154 @@
+/* Reset e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2d3436;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container Principal */
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Estilo da Imagem do Avatar */
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #0984e3;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos de Texto */
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #636e72;
+}
+
+/* Nome */
+.intro {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+}
+
+/* Título Principal */
+h1 {
+    color: #0984e3;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: #0984e3;
+    bottom: -10px;
+    left: 25%;
+    border-radius: 3px;
+}
+
+/* Formação */
+.formacao {
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+/* Título Habilidades */
+.habilidades-titulo {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #2d3436;
+    margin: 1.5rem 0;
+}
+
+/* Container de Habilidades */
+.habilidades-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.habilidades-container p {
+    background: #0984e3;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.habilidades-container p:hover {
+    background: #0768b1;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .intro {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .habilidades-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
